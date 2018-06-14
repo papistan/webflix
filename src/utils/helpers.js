@@ -1,19 +1,17 @@
-import Axios from 'axios';
-
+import axios from 'axios';
 
 
 /// API Call 
-const movieSearch = term => {
+export const movieSearch = term => {
 
     let apiKey = '50bb8cc380100c5ea082ad86e775e26b';
-    let searchQuery = ' ${apiKey}';
+    let searchQuery = 'https://api.themoviedb.org/3/search/company?api_key=${apiKey}&query=${term}';
 
     axios
     .get(searchQuery)
     .then(data => {
-    self.setState({
-        saturday: data.data.events,
-        sunday: data.data.events
+    this.setState({
+        moview: data.results
     });
     })
     .catch(error => {
@@ -21,3 +19,4 @@ const movieSearch = term => {
     });
 
 }
+
