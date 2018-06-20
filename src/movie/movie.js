@@ -14,7 +14,7 @@ const Movie = props => {
         <li className="movie-container" >
             <img src={image} alt="movie poster"></img>
             <p> {title} </p>
-            <p> Rating: {vote_average} </p>
+            <p className="rating"> Rating: {vote_average} </p>
         </li>
     )
     
