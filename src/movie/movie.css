@@ -1,0 +1,9 @@
+.movie-container {
+    list-style-type: none;
+}
+
+.movie-container img {
+    height: 50vh;
+    width: 80vw;
+    padding: 1vh;
+}
