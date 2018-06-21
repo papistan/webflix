@@ -1,74 +1,72 @@
 .movie-container {
-    list-style-type: none;
-    font-family:  helvetica neue ,arial,helvetica,freesans,liberation sans,numbus sans l, sans-serif;;
-    color: white;
-    font-size: .7em;
-    letter-spacing: 3px;
-    font-weight: 100;
-    height: 65vh;
-    width: 80vw;
-   margin: auto;
-   margin-top: 2vh;
+  list-style-type: none;
+  font-family: helvetica neue, arial, helvetica, freesans, liberation sans,
+    numbus sans l, sans-serif;
+  color: white;
+  font-size: 0.7em;
+  letter-spacing: 3px;
+  font-weight: 100;
+  height: 65vh;
+  width: 80vw;
+  margin: auto;
+  margin-top: 2vh;
 }
 .movie-container:hover {
-    background-color: rgb(68, 0, 0);
+  background-color: rgb(68, 0, 0);
 }
 
 .movie-container img {
-    height: 50vh;
-    width: 80vw;
-    box-shadow: 8px 10px 20px 0px rgba(216, 218, 219, 0.15);
+  height: 50vh;
+  width: 80vw;
+  box-shadow: 8px 10px 20px 0px rgba(216, 218, 219, 0.15);
 }
 .movie-container p {
-    margin-top: .5vh;
- 
-    text-overflow: ellipsis;
-    max-height: 5vh;
+  margin-top: 0.5vh;
+  text-overflow: ellipsis;
+  max-height: 5vh;
 }
 .movie-container .rating {
-    font-size: .6em;
-    margin: 1vh;
+  font-size: 0.6em;
+  margin: 1vh;
 }
 
 .movie-container .movie-info {
-    display: none;
+  display: none;
 }
 
 .overview {
-    overflow: visible;
-
+  overflow: visible;
 }
 
 @media only screen and (min-width: 480px) {
-    .movie-container {
-        height: 62vh;
-        width: 30vw;
-    }
-    .movie-container img {
-        height: 52vh;
-        width: 30vw;
-    }
-    .movie-container:hover .movie-info {
-        display: block;
-        color: white;
-    }
+  .movie-container {
+    height: 62vh;
+    width: 30vw;
+  }
+  .movie-container img {
+    height: 52vh;
+    width: 30vw;
+  }
+  .movie-container:hover .movie-info {
+    display: block;
+    color: white;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    .movie-container {
-        height: 32vh;
-        width: 15vw;
-        transition: height .7s ease;
-        transition: width .7s ease;
-        
-    }
-    .movie-container:hover {
-        height: 70vh;
-        width: 20vw;
-    }
+  .movie-container {
+    height: 32vh;
+    width: 15vw;
+    transition: height 0.7s ease;
+    transition: width 0.7s ease;
+  }
+  .movie-container:hover {
+    height: 70vh;
+    width: 20vw;
+  }
 
-    .movie-container img {
-        height: 27vh;
-        width: 15vw;
-    }
+  .movie-container img {
+    height: 27vh;
+    width: 15vw;
+  }
 }

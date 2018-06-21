@@ -1,33 +1,31 @@
-import React, { Component } from 'react';
-import './search.css';
+import React, { Component } from "react";
+import "./search.css";
 
 class Search extends Component {
-    constructor(props) {
-        super(props);
-    
-        this.state = { term: "" };
-      }
+  constructor(props) {
+    super(props);
 
-     
-      render() {
-          return (
-              <div className="search-bar">
-                <h6> WEBFLIX</h6>
-                <div id="magnifying-glass"></div>
-                <input
-                placeholder="Movie Title"
-                value={this.state.term}
-                onChange={event => this.onInputChange(event.target.value)}
-                />
-              </div>
-          )
-      }
+    this.state = { term: "" };
+  }
 
-      onInputChange(term) {
-        this.setState({ term });
-        this.props.onSearchTermChange(term);
-      }
+  render() {
+    return (
+      <div className="search-bar">
+        <h6> WEBFLIX</h6>
+        <div id="magnifying-glass" />
+        <input
+          placeholder="Movie Title"
+          value={this.state.term}
+          onChange={event => this.onInputChange(event.target.value)}
+        />
+      </div>
+    );
+  }
+
+  onInputChange(term) {
+    this.setState({ term });
+    this.props.onSearchTermChange(term);
+  }
 }
-
 
 export default Search;

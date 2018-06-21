@@ -1,39 +1,73 @@
-import axios from 'axios';
+import axios from "axios";
 
-const apiKey = '50bb8cc380100c5ea082ad86e775e26b';
-/// Movies Search API Call 
-export const moviesSearch = term => {
+const apiKey = "50bb8cc380100c5ea082ad86e775e26b";
+/// Movies Search API Call
 
-    let searchQuery = `https://api.themoviedb.org/3/search/company?api_key=${apiKey}&query=${term}`;
-
-    axios
+export function moviesSearch(term) {
+  let searchQuery = `https://api.themoviedb.org/3/search/company?api_key=${apiKey}&query=${term}`;
+  axios
     .get(searchQuery)
     .then(data => {
-        this.setState({
-            movies: data.data.results
+      return moviesSort(data.data.results)
+        .then(data => data)
+        .catch(error => {
+          console.log(error);
         });
     })
+    .then(sortedMovies => {
+      this.setState({
+        movies: sortedMovies
+      });
+    })
     .catch(error => {
-        console.log(error);
+      console.log(error);
     });
-
 }
 
-// Movie Details API call
-export const movieDetailSearch = id => {
-        let movieId = id;
-        let searchTerm = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`;
-        let movieInfo = null;
+export function moviesSort(movies) {
+  let searchTerm;
 
-        axios
-        .get(searchTerm)
-        .then(data => {
-            this.setState({
-            movie: data.data
-            })
-        })
-        .catch(error => {
-            console.log(error);
-        });
-    
+  let allMoviesArray = movies.map(movie => {
+    searchTerm = `https://api.themoviedb.org/3/movie/${
+      movie.id
+    }?api_key=${apiKey}&language=en-US`;
+
+    return axios
+      .get(searchTerm)
+      .then(data => {
+        let movieObject = data.data;
+        let {
+          popularity,
+          id,
+          overview,
+          poster_path,
+          runtime,
+          title,
+          vote_average
+        } = movieObject;
+        let movieDetailsArray = {
+          id,
+          popularity,
+          overview,
+          poster_path,
+          runtime,
+          title,
+          vote_average
+        };
+
+        return movieDetailsArray;
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  });
+
+  const resolvedMovies = Promise.all(allMoviesArray)
+    .then(movies => movies.filter(movie => movie !== undefined))
+    .then(movies => movies.sort((a, b) => a.popularity - b.popularity))
+    .catch(error => {
+      console.log(error);
+    });
+
+  return resolvedMovies;
 }

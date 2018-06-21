@@ -1,71 +1,69 @@
 .search-bar {
-    display: flex;
-    margin-left: 3vh;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  margin-left: 3vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .search-bar input {
-    flex: 8;
-    min-width: 50vw;
-    max-width: 60vw;
-    padding: 1vh;
-    margin-top: 3vh;
-    margin-left: 3vh;
-    border: solid white;
-    font-size: 2em;
-    background-color: transparent;
-    color: white;
-    
+  flex: 8;
+  min-width: 50vw;
+  max-width: 60vw;
+  padding: 1vh;
+  margin-top: 3vh;
+  margin-left: 3vh;
+  border: solid white;
+  font-size: 2em;
+  background-color: transparent;
+  color: white;
 }
 
 .search-bar h6 {
-    display: none;
+  display: none;
 }
 #magnifying-glass {
-    display: none;
+  display: none;
 }
 #magnifying-glass::before {
-    display: none;
+  display: none;
 }
 
 @media only screen and (min-width: 480px) {
-    
-       .search-bar h6 {
-        display: flex;
-        color: #e50914;
-        padding: 1vh;
-        margin-top: 3vh;
-        margin-left: 3vw;
-        text-align: left;
-        font-size: 2.5em;
-    }
+  .search-bar h6 {
+    display: flex;
+    color: #e50914;
+    padding: 1vh;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    text-align: left;
+    font-size: 2.5em;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    #magnifying-glass {
-        font-size: 4em; /* This controls the size. */
-        display: inline-block;
-        width: 0.4em;
-        height: 0.4em;
-        margin-top: 4vh;
-        margin-left: 5vw;
-        border: 0.1em solid rgb(252, 249, 249);
-        position: relative;
-        border-radius: 0.35em;
-       }
-       #magnifying-glass::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        right: -0.25em;
-        bottom: -0.1em;
-        border-width: 0;
-        background: rgb(250, 249, 249);
-        width: 0.35em;
-        height: 0.08em;
-       
-        -webkit-transform: rotate(45deg);
-           -moz-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-             -o-transform: rotate(45deg);
-       }
+  #magnifying-glass {
+    font-size: 4em; /* This controls the size. */
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    margin-top: 4vh;
+    margin-left: 5vw;
+    border: 0.1em solid rgb(252, 249, 249);
+    position: relative;
+    border-radius: 0.35em;
+  }
+  #magnifying-glass::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -0.25em;
+    bottom: -0.1em;
+    border-width: 0;
+    background: rgb(250, 249, 249);
+    width: 0.35em;
+    height: 0.08em;
+
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  }
 }
