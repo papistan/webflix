@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiKey = "50bb8cc380100c5ea082ad86e775e26b";
+const apiKey = "";
 /// Movies Search API Call
 
 export function moviesSearch(term) {
