@@ -1,12 +1,14 @@
 .movie-container {
     list-style-type: none;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Kanit', sans-serif;
     color: white;
     font-size: 1.5em;
-    font-style: bold;
+    letter-spacing: 3px;
+    font-weight: 200;
     height: 65vh;
     width: 80vw;
    margin: auto;
+   margin-top: 2vh;
 }
 .movie-container:hover {
     background-color: rgb(68, 0, 0);
@@ -17,19 +19,35 @@
     height: 50vh;
     width: 80vw;
  
-    box-shadow: 8px 10px 20px 0px rgba(46, 61, 73, 0.15);
+    box-shadow: 8px 10px 20px 0px rgba(216, 218, 219, 0.15);
 }
-
+.movie-container p {
+    margin-top: .5vh;
+}
 .movie-container .rating {
     font-size: .6em;
     margin: 1vh;
 }
 
 @media only screen and (min-width: 480px) {
-    
+    .movie-container {
+        height: 35vh;
+        width: 30vw;
+    }
+    .movie-container img {
+        height: 35vh;
+        width: 20vw;
+    }
 }
 
 
 @media only screen and (min-width: 768px) {
-
+    .movie-container {
+        height: 35vh;
+        width: 30vw;
+    }
+    .movie-container img {
+        height: 35vh;
+        width: 20vw;
+    }
 }

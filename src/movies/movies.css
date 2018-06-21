@@ -3,3 +3,19 @@
     display: grid;
     margin-top: 1vh;
 }
+
+@media only screen and (min-width: 480px) {
+    .movies-container {
+       
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .movies-container {
+        grid-template-columns: auto auto auto auto auto auto ;
+      
+    }
+
+
+}
