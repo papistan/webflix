@@ -16,7 +16,7 @@ class App extends Component {
     this.state = {
       movies: []
     };
-    this.moviesSearch('surf');
+    this.moviesSearch('z');
   }
   
   render() {

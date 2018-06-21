@@ -2,11 +2,12 @@
    
     display: grid;
     margin-top: 1vh;
+    grid-template-columns: auto;
 }
 
 @media only screen and (min-width: 480px) {
     .movies-container {
-       
+        grid-template-columns: auto auto auto ;
     }
 }
 
@@ -14,7 +15,6 @@
 @media only screen and (min-width: 768px) {
     .movies-container {
         grid-template-columns: auto auto auto auto auto auto ;
-      
     }
 
 

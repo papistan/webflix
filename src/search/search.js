@@ -12,6 +12,8 @@ class Search extends Component {
       render() {
           return (
               <div className="search-bar">
+                <h6> WEBFLIX</h6>
+                <div id="magnifying-glass"></div>
                 <input
                 placeholder="Movie Title"
                 value={this.state.term}
